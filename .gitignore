@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Xcode — 사용자별 상태 / 빌드 산출물
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+DerivedData/
+build/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods / Carthage (미사용이지만 관례상 포함)
+Pods/
+Carthage/Build/
+
+# 개발용 백업 (레거시 데이터셋)
+exercises.free-db.bak.json
+
+# 로컬 툴링 상태
+.claude/
