@@ -1,5 +1,9 @@
 # 워카웃 (WorkoutApp)
 
+| 홈 (오늘의 추천) | 부위별 피로도 | 세션 · AI 코치 | 인바디 분석 |
+|:---:|:---:|:---:|:---:|
+| ![홈 화면](docs/screenshots/01-home.png) | ![부위별 피로도 인체 그림](docs/screenshots/03-report-fatigue-map.png) | ![세션 진행 · AI 코치](docs/screenshots/06-workout-ai-coach.png) | ![인바디 AI 코치](docs/screenshots/08-inbody-ai-coach.png) |
+
 > ⚠️ **이 프로젝트는 개발 연습용입니다.**
 > 개발자의 SwiftUI·iOS 개발 지식은 **낮은 수준**이며, 이 앱은 학습과 연습을 목적으로 제작했습니다.
 > 따라서 코드 구조·설계·관례가 iOS 실무 표준과 다를 수 있고, 완성도보다 **직접 만들어보며 배우는 것**에 무게를 둔 프로젝트입니다.
@@ -231,6 +235,31 @@
 - **벡터 인체맵 내장**: 근육맵 SVG를 절대좌표 큐빅으로 오프라인 변환해 파일에 내장 — 외부 이미지·런타임 의존 없이 어떤 크기에서도 선명
 - **미디어 소스 추상화**: `ExerciseImageProvider` 프로토콜 한 지점(`ExerciseMedia.provider`)에서 GIF 소스를 주입해, 데이터셋·라이선스 교체 시 뷰 수정 불필요
 - **비파괴적 세션**: 세션은 플랜의 복사본으로 동작해, 진행 중 순서변경·운동추가가 원본 플랜을 오염시키지 않음
+
+---
+
+## 12. 앱 화면 모아보기
+
+### 12.1 홈 / 세션
+
+| 홈 (오늘의 추천) | 플랜 선택 | 세션 진행 (세트 기록) | AI 자세 코치 |
+|:---:|:---:|:---:|:---:|
+| ![](docs/screenshots/01-home.png) | ![](docs/screenshots/02-home-plan-select.png) | ![](docs/screenshots/05-workout-session.png) | ![](docs/screenshots/06-workout-ai-coach.png) |
+| 이번 주 부족한 부위를 분석한 추천 플랜 | 빈 플랜 또는 저장된 플랜으로 시작 | 세트별 무게·횟수 기록과 휴식 타이머 | 운동별 핵심 자세·흔한 실수·템포 안내 |
+
+### 12.2 리포트
+
+| 부위별 피로도 | 부위 밸런스 (레이더 차트) |
+|:---:|:---:|
+| ![](docs/screenshots/03-report-fatigue-map.png) | ![](docs/screenshots/04-report-volume-radar.png) |
+| 세부부위 회복 곡선을 인체 그림 위에 시각화 | 기간별 부위별 볼륨을 최다 부위 대비 비율로 비교 |
+
+### 12.3 인바디 체성분 분석
+
+| 측정 기록 (CSV 업로드) | AI 코치 조언 |
+|:---:|:---:|
+| ![](docs/screenshots/07-inbody-history.png) | ![](docs/screenshots/08-inbody-ai-coach.png) |
+| 인바디 CSV로 불러온 날짜별 체중·골격근·체지방 | 골격근×체지방 4분면 판정 기반 방향 제안 |
 
 ---
 
